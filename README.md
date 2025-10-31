@@ -1,30 +1,83 @@
-# SQL_MusicStore_Analysis
-SQL project to analyze online music store data
+# 🎵 SQL Music Store Analysis
 
-This project is for beginners and will teach you how to analyze the music playlist database. You can examine the dataset with SQL and help the store understand its business growth by answering simple questions.
+## 📌 Project Overview
+This SQL project analyzes data from an **online music store database**.  
+You will use SQL to answer business questions, perform data exploration, and derive insights to help the store understand customer behavior, playlist trends, and sales performance.
 
-## Database and Tools
-* Postgre SQL
-* PgAdmin4
+This project is ideal for **beginners**, covering:
+- Writing basic to intermediate SQL queries
+- Understanding relationships between tables
+- Performing data analysis using relational databases
 
-Schema- Music Store Database  
+---
+
+## 🛠 Database & Tools Used
+| Component | Description |
+|----------|-------------|
+| **Database** | PostgreSQL (PostgreSQL RDBMS) |
+| **Interface / Client** | pgAdmin4 |
+| **Dataset** | Music Store database (ER diagram below) |
+
+---
+
+## 🗂 Database Schema
+
+### Music Store ER Diagram  
 ![MusicDatabaseSchema](https://user-images.githubusercontent.com/112153548/213707717-bfc9f479-52d9-407b-99e1-e94db7ae10a3.png)
 
-Certainly! Let’s analyze the schema of the database shown in the image. The schema represents a media store database with several interconnected tables. Here are the key points:
+---
 
-Tables and Relationships:
-The database includes the following tables:
+## 🧱 Database Structure
 
-Artist: Contains information about artists, including their names.
+The database contains multiple interconnected tables. Below is a description of the key tables and relationships:
 
-Album: Stores details about albums, such as titles and artist associations.
+| Table | Description |
+|--------|-------------|
+| **Artist** | Contains artist info such as `ArtistId`, `Name`. |
+| **Album** | Holds album details, linked to `ArtistId`. |
+| **Track** | Represents individual music tracks. Columns include `TrackId`, `Name`, `AlbumId`, `MediaTypeId`, `GenreId`, `Composer`, `Milliseconds`, `Bytes`, `UnitPrice`. |
+| **MediaType** | Lists available media formats (`MediaTypeId`, `Name`). |
+| **Genre** | Genre information such as Rock, Pop, Jazz (`GenreId`, `Name`). |
+| **Playlist** | Contains playlist information (`PlaylistId`, `Name`). |
+| **PlaylistTrack** | Junction table linking playlists and tracks (`PlaylistId`, `TrackId`). |
+| **Customer** | Customer details like name, city, country. |
+| **Invoice** | Customer purchase transactions. |
+| **InvoiceLine** | Individual line item within an invoice (track purchase). |
+| **Employee** | Store employee info (sales support agents, general manager). |
 
-Track: Represents individual music tracks, including attributes like name, album ID, media type, genre ID, composer, duration (in milliseconds), file size (in bytes), and unit price.
+---
 
-MediaType: Describes different media types (e.g., audio, video).
+## 🔗 Relationships
+- **Artist → Album** (One-to-Many)
+- **Album → Track** (One-to-Many)
+- **Genre / MediaType → Track** (Categorization)
+- **Playlist ↔ Track** (Many-to-Many via PlaylistTrack)
+- **Customer → Invoice → InvoiceLine** (Sales + Purchases)
+- **Employee → Customer** (Support Representative relationship)
 
-Genre: Contains genre information (e.g., rock, pop, jazz).
+---
 
-PlaylistTrack: Serves as a link between playlists and tracks, allowing multiple tracks to be associated with a playlist.
+## 📊 Analysis Goals
+By writing SQL queries, we aim to answer questions like:
 
-Employee: Holds employee data, including names, titles
+- Who are the top customers?
+- Which genre generates the most revenue?
+- Which artists have the most tracks in playlists?
+- What are the best-selling tracks and albums?
+
+Examples of analysis tasks:
+- Total sales by country
+- Most popular genre by number of tracks purchased
+- Employees generating the most business through customer accounts
+
+
+## ✅ Outcome
+By the end of this project, you will be able to:
+- Analyze relational data using SQL
+- Generate business insights from structured tables
+- Apply SQL joins and aggregations confidently
+
+---
+
+
+
