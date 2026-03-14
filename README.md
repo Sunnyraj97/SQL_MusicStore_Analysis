@@ -1,13 +1,14 @@
 # 🎵 SQL Music Store Analysis
 
 ## 📌 Project Overview
-This SQL project analyzes data from an **online music store database**.  
-You will use SQL to answer business questions, perform data exploration, and derive insights to help the store understand customer behavior, playlist trends, and sales performance.
+Analysed a normalised music store database in PostgreSQL to answer 
+business questions about customer spending, genre popularity, and 
+artist revenue — working across 11 interconnected tables.
 
-This project is ideal for **beginners**, covering:
-- Writing basic to intermediate SQL queries
-- Understanding relationships between tables
-- Performing data analysis using relational databases
+Focused on three core business problems that required progressively 
+complex SQL — from identifying the best-selling artist and their 
+top customer, to finding the most popular genre per country, to 
+ranking the highest-spending customer in every market.
 
 ---
 
@@ -57,25 +58,9 @@ The database contains multiple interconnected tables. Below is a description of 
 
 ---
 
-## 📊 Analysis Goals
-By writing SQL queries, we aim to answer questions like:
-
-- Who are the top customers?
-- Which genre generates the most revenue?
-- Which artists have the most tracks in playlists?
-- What are the best-selling tracks and albums?
-
-Examples of analysis tasks:
-- Total sales by country
-- Most popular genre by number of tracks purchased
-- Employees generating the most business through customer accounts
 
 
-## ✅ Outcome
-By the end of this project, you will be able to:
-- Analyze relational data using SQL
-- Generate business insights from structured tables
-- Apply SQL joins and aggregations confidently
+
 
 ---
 
